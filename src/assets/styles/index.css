@@ -1,11 +1,11 @@
 
-
 /* ==================
         初始化
  ==================== */
  #app {
 
-	--homecolor:#5f9ea0;
+	--homecolor:rgba(105, 173, 54, 1);
+	--homecolorlight:#8dc63f;
 	/* Color 可以自定义相关配色 */
 	/* var属性兼容性 --> https://www.caniuse.com/#feat=css-variables */
 	/* 标准色 */
@@ -69,8 +69,36 @@
 	--darkpurple: rgb(74, 27, 83);
 	--lightpink: rgb(242, 237, 228);
 	--myellow: rgb(219, 175, 61);
-	--mgreen: rgb(109, 181, 127);
+	--mgreen: #125149;
 	--mblue: rgb(119, 196, 238);
+	--lightgreen: rgba(105,173,54,0.06);
+	--footblue: #1E1F45;
+
+
+	--allLeftWMax:344px;
+	--allJianWMax:688px;
+	--allWMax:1100px; 
+
+	--allLeftW:150px;
+	--allJianW:300px;
+
+	--allLeftWS:70px;
+	--allJianWS:140px;
+
+	--allLeftMobileW:36px;
+	--allJianMobileW:72px;
+
+	--allLeftMobileXSW:15px;
+	--allJianMobileXSW:30px;
+
+	--navH:80px;
+	--navMobileH:52px;
+
+
+	--homecolor1:rgba(105, 173, 54, 0.6);
+	--homecolor2:rgba(105, 173, 54, 0.4);
+	--homecolor3:rgba(105, 173, 54, 0.3);
+	--graycolor:rgba(1, 1, 1, 0.1);
 
 
 }
@@ -165,7 +193,16 @@ image {
   text-overflow:ellipsis;
 
 }
+.uc-6linetext{
 
+	display: -webkit-box;
+	word-break: break-all;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp:6;
+	overflow: hidden;
+	text-overflow:ellipsis;
+  
+  }
 /* ==================
           图片
  ==================== */
@@ -703,9 +740,20 @@ radio.white[checked] .wx-radio-input {
 	text-decoration: line-through
 }
 
-.no-underline{
-	text-decoration: none
-}
+.link-noline {
+	text-decoration: none;
+  }
+.link-hover-underline:hover{
+	text-decoration: underline ;
+	color: var(--black);
+ }
+ .link-hover-underline-w:hover{
+	text-decoration: underline ;
+	color: white;
+ }
+ .link-hover-underline-red:hover{
+	color: var(--red);
+ }
 /* -- 虚线 -- */
 
 .dashed::after {
@@ -3162,7 +3210,9 @@ scroll-view.cu-steps .cu-item {
 .margin-xl {
 	margin: 25px;
 }
-
+.margin-xxl {
+	margin: 30px;
+}
 .margin-top-xs {
 	margin-top: 5px;
 }
@@ -3182,6 +3232,9 @@ scroll-view.cu-steps .cu-item {
 .margin-top-xl {
 	margin-top: 25px;
 }
+.margin-top-xxl {
+	margin-top: 30px;
+}
 
 .margin-right-xs {
 	margin-right: 5px;
@@ -3200,9 +3253,11 @@ scroll-view.cu-steps .cu-item {
 }
 
 .margin-right-xl {
-	margin-right: 15px;
+	margin-right: 25px;
 }
-
+.margin-right-xxl {
+	margin-right: 30px;
+}
 .margin-bottom-xs {
 	margin-bottom: 5px;
 }
@@ -3225,7 +3280,9 @@ scroll-view.cu-steps .cu-item {
 .margin-bottom-xl {
 	margin-bottom: 25px;
 }
-
+.margin-bottom-xxl {
+	margin-bottom: 30px;
+}
 .margin-left-xs {
 	margin-left: 5px;
 }
@@ -3244,6 +3301,9 @@ scroll-view.cu-steps .cu-item {
 
 .margin-left-xl {
 	margin-left: 25px;
+}
+.margin-left-xxl {
+	margin-left: 30px;
 }
 
 .margin-lr-xs {
@@ -3269,6 +3329,10 @@ scroll-view.cu-steps .cu-item {
 .margin-lr-xl {
 	margin-left: 25px;
 	margin-right: 25px;
+}
+.margin-lr-xxl {
+	margin-left: 30px;
+	margin-right:30px;
 }
 .margin-lr-50 {
 	margin-left: 50px;
@@ -3298,7 +3362,11 @@ scroll-view.cu-steps .cu-item {
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
-
+.margin-tb-xxl {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+ 
 .padding-0 {
 	padding: 0;
 }
@@ -3322,7 +3390,9 @@ scroll-view.cu-steps .cu-item {
 .padding-xl {
 	padding: 25px;
 }
-
+.padding-xxl {
+	padding: 30px;
+}
 .padding-top-xs {
 	padding-top: 5px;
 }
@@ -3342,7 +3412,9 @@ scroll-view.cu-steps .cu-item {
 .padding-top-xl {
 	padding-top: 25x;
 }
-
+.padding-top-xxl {
+	padding-top: 30x;
+}
 .padding-right-xs {
 	padding-right: 5px;
 }
@@ -3363,6 +3435,9 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 25px;
 }
 
+.padding-right-xxl {
+	padding-right: 30px;
+}
 .padding-bottom-xs {
 	padding-bottom: 5px;
 }
@@ -3381,6 +3456,9 @@ scroll-view.cu-steps .cu-item {
 
 .padding-bottom-xl {
 	padding-bottom: 25px;
+}
+.padding-bottom-xxl {
+	padding-bottom: 30px;
 }
 
 .padding-left-xs {
@@ -3401,6 +3479,9 @@ scroll-view.cu-steps .cu-item {
 
 .padding-left-xl {
 	padding-left: 25px;
+}
+.padding-left-xxl {
+	padding-left: 30px;
 }
 
 .padding-lr-xs {
@@ -3427,7 +3508,10 @@ scroll-view.cu-steps .cu-item {
 	padding-left: 25px;
 	padding-right: 25px;
 }
-
+.padding-lr-xxl {
+	padding-left: 30px;
+	padding-right: 30px;
+}
 .padding-tb-xs {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -3451,6 +3535,10 @@ scroll-view.cu-steps .cu-item {
 .padding-tb-xl {
 	padding-top: 25px;
 	padding-bottom: 25px
+}
+.padding-tb-xxl {
+	padding-top: 30px;
+	padding-bottom: 30px
 }
 
 /* -- 浮动 --  */
@@ -4086,7 +4174,20 @@ scroll-view.cu-steps .cu-item {
 .lines-white {
 	color: var(--white);
 }
+.btn-olive{
 
+	background-color: var(--homecolor);
+	color: var(--white);
+}
+.btn-olive:hover{
+	background-color: var(--homecolorlight);
+ 
+}
+.mainbg{
+
+	background-color: var(--homecolor);
+
+}
 .text-main{
 	color: var(--homecolor);
 }
@@ -4102,26 +4203,114 @@ scroll-view.cu-steps .cu-item {
 .text-placeholder{
     color: #C0C4CC;
 }
+.text-72-font{
+	font-size: calc(100vw * 72 / 1920);
+
+}
+.text-50-font-noscal{
+	font-size: 50px;
+
+}
+.text-40-font{
+	font-size: calc(100vw * 40 / 1920);
+
+}
+.text-40-font-noscal{
+	font-size: 40px;
+
+}
+.text-36-font{
+	font-size: calc(100vw * 36 / 1920);
+
+}
+
+.text-34-font{
+	font-size: calc(100vw * 34 / 1920);
+
+}
+.text-30-font{
+	font-size: calc(100vw * 30 / 1920);
+
+}
+.text-30-font-noscal{
+	font-size: 30px;
+
+}
+.text-28-font{
+	font-size: calc(100vw * 28 / 1920);
+}
+.text-28-font-noscal{
+	font-size:  28px;
+}
+.text-26-font{
+	font-size: calc(100vw * 26 / 1920);
+
+}
+
+.text-26-font-noscal{
+	font-size: 26px;
+
+}
+.text-24-font{
+	font-size: calc(100vw * 24 / 1920);
+
+}
+
+.text-24-font-noscal{
+	font-size: 24px;
+
+}
 .text-20-font{
-    font-size: 20px;
+	font-size: calc(100vw * 20 / 1920);
+
+}
+.text-20-font-noscal{
+	font-size:  20px;
 }
 .text-18-font{
-    font-size: 18px;
+    
+	font-size: calc(100vw * 18 / 1920);
+
+}
+.text-18-font-noscal{
+	font-size:  18px;
 }
 .text-16-font{
-    font-size: 16px;
+	font-size: calc(100vw * 16/ 1920);
+
+}
+.text-16-font-noscal{
+	font-size:  16px;
 }
 .text-14-font{
-    font-size: 14px;
+	font-size: calc(100vw * 14 / 1920);
+
+}
+.text-14-font-noscal{
+	font-size:  14px;
 }
 .text-13-font{
-    font-size: 13px;
+    
+	font-size: calc(100vw * 13 / 1920);
+
+}
+.text-13-font-noscal{
+	font-size:  13px;
 }
 .text-12-font{
-    font-size: 12px;
+    /*font-size: 12px;*/
+	font-size: calc(100vw * 12 / 1920);
+}
+.text-12-font-noscal{
+	font-size:  12px;
 }
 .text-10-font{
-    font-size: 10px;
+    
+	font-size: calc(100vw * 10/ 1920);
+
+}
+.text-10-font-noscal{
+	font-size:  10px;
 }
 .bg-shadow-dark{
     box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
@@ -4163,37 +4352,69 @@ scroll-view.cu-steps .cu-item {
 }
 
 .nav-top{
-     margin-top: 60px;
+    margin-top: var(--navH);
 }
 .alltop{
-	top: 60px;
+	top: var(--navH);
+}
+.navheight_mobile{
+	height: var(--navMobileH);
+}
+.nav-top_mobile{
+    margin-top: var(--navMobileH);
+}
+.alltop_mobile{
+	top: var(--navMobileH);
 }
 .navheight{
-	height: 60px;
+	height: var(--navH);
 }
 .allheight{
 	height: 100%;
-  }
-  .allwidth{
+}
+.allwidth{
 	width: 100%;
-  }
-.mallw
-{
-    width: calc(100% - 120px);
-    margin: 0 60px;
+}
+.mallw_max{
+    
+	width: var(--allWMax);
+	margin-left: calc((100% - var(--allWMax))/2);
+
+	/* width: calc(100% - var(--allJianWMax)); */
+    /* margin: 0 var(--allLeftWMax); */
+
+}
+.mallw{
+    
+	width: calc(100% - var(--allJianW));
+    margin: 0 var(--allLeftW);
+
+
+}
+.mallw_small{
+    
+	width: calc(100% - var(--allJianWS));
+    margin: 0 var(--allLeftWS);
+
 
 }
 .mallw_mobile
 {
-    width: calc(100% - 50px);
-    margin: 0 25px;
+    width: calc(100% - var(--allJianMobileW));
+    margin: 0 var(--allLeftMobileW);
+
+}
+.mallw_mobile_xs
+{
+    width: calc(100% - var(--allJianMobileXSW));
+    margin: 0 var(--allLeftMobileXSW);
 
 }
 .assistor{
 
 	position: relative;
 	display: block;
-   
+
 	width: 100%;
 	height: 100%;
 	
@@ -4236,7 +4457,7 @@ scroll-view.cu-steps .cu-item {
 	width: 100%;
 	overflow-x: hidden;
 	overflow-y: scroll;
-  }
+}
 /* 在全局CSS里引用: */
 /* 滚动条宽度 */
 ::-webkit-scrollbar {
@@ -4244,25 +4465,22 @@ scroll-view.cu-steps .cu-item {
 	height: 10px;
 	background-color: transparent;
 	
-   }
+}
    /* 滚动条的滑块 */
-   ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	background-color: #c6c6ca;
 	border-radius: 3px;
-   }
- 
-  
+}
 
 .item-subject:hover{
 	text-decoration: underline ;
 	color: var(--black);
- }
+}
 .wrapviews
 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap:wrap;
- 
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
 }
 .wraponeview{
 	position:relative
@@ -4271,7 +4489,7 @@ scroll-view.cu-steps .cu-item {
 .shou{
 	cursor:pointer;
 }
- 
+
 .text-purple{
 
 	color: var(--darkpurple);
@@ -4283,7 +4501,92 @@ scroll-view.cu-steps .cu-item {
 .orangeLightbg{
 	background-color: var(--orangeLight);
 }
+.lightgreenbg{
+	background-color: var(--lightgreen);
 
+
+}
 .mbluebg{
 	background-color: var(--mblue);
+}
+.navbg{
+	background-color: var(--mgreen);
+	color: white;
+}
+.footbluebg{
+	background-color: var(--footblue);
+}
+
+h1{
+
+	font-size: 26px;
+	/*font-weight: bold;*/
+	color: rgb(46,45,46);
+	margin: 20px 0;
+
+}
+h2{
+
+	font-size: 22px;
+	/*font-weight: bold;*/
+	color: rgb(46,45,46);
+
+}
+p{
+	font-size: 15px;
+	color: rgb(46,45,46);
+	line-height:24px;
+}
+.onespan{
+	 
+	font-size: 15px;
+	color: rgb(46,45,46);
+	line-height:24px;
+	 
+}
+ 
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color:var(--homecolor);
+    color: #FFF;
+	border: none;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active:hover {
+    color: #FFF;
+}
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, 
+.el-pagination.is-background .el-pager li {
+    
+    background-color: white;
+	border: 1px solid #e2e1e1 ;
+    color: #606266;
+ 	font-weight: normal;
+}
+.el-pagination.is-background .el-pager li.number:hover {
+    
+   
+    color:var(--homecolor);
+ 	 
+}
+
+.el-breadcrumb__inner.is-link:hover{
+     color:var(--homecolor) !important;
+}
+
+.el-collapse{
+	border: none;
+}
+.el-collapse-item__header{
+    background-color: transparent; 
+    color: rgba(255,255,255,0.62);
+    border-bottom: none;
+    font-weight: 400;
+	height:34px;
+	line-height: 34px;
+   
+}
+ 
+.el-collapse-item__wrap {
+    color: white;
+	background-color:transparent; 
+	border: none;
 }
