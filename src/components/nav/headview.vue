@@ -30,7 +30,7 @@
 
 <script>
 import elementResizeDetector from "element-resize-detector";
-import {getnavbtnModels} from "../../../tools/common"
+import {getnavbtnModels} from "../../tools/common"
 
 export default {
   name: '',

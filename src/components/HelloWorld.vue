@@ -79,12 +79,9 @@
                       </div>
         </div>
      </div>
-
-
       <div id="c" class="bgpink padding-tb">
          <div class="flex">
           <div class="mbluebg" style="width:45%;height:300px;border-radius:0 150px 150px 0;"></div>
-                  
          </div>
      </div>
     
@@ -172,15 +169,14 @@
         </div>
     
     </div>
-        
-    
       <el-drawer
-            size="100%"
-            :visible.sync="drawer"
-            direction="rtl"
-            :modal="false" :with-header="false">
-            <rightview @navSelect='navRBtnClick' @closeBtnClick="drawer = false"/>
-         </el-drawer>
+        size="100%"
+        :visible.sync="drawer"
+        direction="rtl"
+        :modal="false" :with-header="false">
+        <rightview @navSelect='navRBtnClick' @closeBtnClick="drawer = false"/>
+      </el-drawer>
+      
   </div>
    
 </template>
@@ -308,8 +304,7 @@ export default {
       navSelect(key){
         if(key == 333){
           this.drawer = true;
-         return;
-
+          return;
         }
         // console.log("-navclcik---",key);
           var idstr = "jj";

@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import {getnavbtnModels} from "../../../tools/common"
+import {getnavbtnModels} from "../../tools/common"
 export default {
   name: '',
   data () {
