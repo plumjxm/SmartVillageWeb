@@ -10,6 +10,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+// const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin')
+
 
 const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -34,6 +36,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
+    //删掉webpack提供的UglifyJS插件
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {
@@ -43,6 +46,22 @@ const webpackConfig = merge(baseWebpackConfig, {
       sourceMap: config.build.productionSourceMap,
       parallel: true
     }),
+    // new ParallelUglifyPlugin({
+
+    //   cacheDir: '.cache/',
+    //   uglifyJS:{
+    //     output: {
+    //       comments: false
+    //     },
+
+    //     compress: {
+    //       warnings: false
+    //     }
+
+    //   }
+
+    // }),
+
     // extract css into its own file
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css'),
@@ -67,6 +86,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         ? 'index.html'
         : config.build.index,
       template: 'index.html',
+      favicon: 'favicon.ico',
       inject: true,
       minify: {
         removeComments: true,
